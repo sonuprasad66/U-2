@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Mq Layout-3..
+    </title>
+</head>
+<style>
+    #card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 60px 150px 150px 150px;
+        gap: 20px;
+        grid-template-areas: 
+        "nav nav nav"
+        "l1 l1 b1"
+        "l1 l1 b2"
+        "l1 l1 b3";
+
+    }
+    #card>div:nth-child(1){
+        grid-area: nav;
+        background-color: yellow;
+        font-size: 40px;
+    }
+    #card>div:nth-child(2){
+        grid-area: l1;
+        background-color: red;
+    }
+    #card>div:nth-child(3){
+        grid-area: b1;
+        background-color: rgb(18, 238, 18);
+    }
+    #card>div:nth-child(4){
+        grid-area: b2;
+        background-color:  rgb(18, 238, 18);
+    }
+    #card>div:nth-child(5){
+        grid-area: b3;
+        background-color:  rgb(18, 238, 18);
+    }
+    @media all and (min-width:450px) and (max-width: 750px){
+        #card{
+            grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 60px 250px 100px;
+        grid-template-areas: 
+        "nav nav nav"
+        "l1 l1 l1"
+        "b1 b2 b3";
+        }
+    }
+
+    @media all and (min-width:100px) and (max-width:450px){
+        #card{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 60px 250px 100px 100px 100px;
+        grid-template-areas: 
+        "nav"
+        "l1"
+        "b1"
+        "b2"
+        "b3";
+        }
+    }
+</style>
+
+<body>
+    <div id="card">
+        <div>Navigation</div>
+        <div>LEFT BOX</div>
+        <div>RIGHT BOX 1</div>
+        <div>RIGHT BOX 2</div>
+        <div> RIGHT BOX 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Grid Area-1 assignment..
+    </title>
+</head>
+<style>
+    #card{
+        display: grid;
+        width: 70%;
+        margin: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 150px 150px 150px;
+        gap: 20px;
+        grid-template-areas: 
+        "l1 l1 l2 l2"
+        "l3 l4 l4 l4"
+        "l5 l5 l5 l5"
+    }
+
+    #card>div:nth-child(1){
+        background-color: rgb(100, 99, 99);
+        grid-area: l1;
+        color: white;
+        padding: 40px 0px 0px 20px;
+        border-radius: 10px;
+    }
+    #card>div:nth-child(2){
+        background-color: rgb(100, 99, 99);
+        grid-area: l2;
+        color: white;
+        padding: 40px 0px 0px 20px;
+        border-radius: 10px;
+    }
+    #card>div:nth-child(3){
+        background-color: rgb(100, 99, 99);
+        grid-area: l3;
+        color: white;
+        padding: 40px 0px 0px 20px;
+        border-radius: 10px;
+    }
+    #card>div:nth-child(4){
+        background-color: rgb(100, 99, 99);
+        grid-area: l4;
+        color: white;
+        padding: 40px 0px 0px 20px;
+        border-radius: 10px;
+    }
+    #card>div:nth-child(5){
+        background-color: rgb(100, 99, 99);
+        grid-area: l5;
+        color: white;
+        padding: 40px 0px 0px 20px;
+        border-radius: 10px;
+    }
+
+
+
+</style>
+<body>
+   <div id="card">
+       <div>A</div>
+       <div>B</div>
+       <div>C</div>
+       <div>D</div>
+       <div>E</div>
+   </div>
+</body>
+</html>

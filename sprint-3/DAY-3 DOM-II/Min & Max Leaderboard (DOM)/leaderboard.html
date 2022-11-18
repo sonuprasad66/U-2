@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#box1
+{width: 40%; height: 90px;
+display: flex; margin: auto;
+justify-content: space-around;
+align-items: center; padding-bottom: 40px;
+}
+#box1>div{
+    width: 20%; height: 80%;
+    border: 1px solid black;
+    margin-top: 140px;
+}
+#box1>div:nth-child(1){
+    background-color: red;
+    align-items: center; justify-content: center; display: flex;
+}
+#box1>div:nth-child(2){
+    background-color: green;
+    align-items: center; justify-content: center; display: flex;
+}
+
+#t1{
+    width: 50%;
+    display: flex; margin: auto;
+justify-content: space-around;
+align-items: center;
+}
+#t1>h5:nth-child(1){
+position: relative;left: 40px; top: 10px;
+color: rgb(36, 31, 31);
+
+}
+#t1>h5:nth-child(2){
+position: relative; right: 35px; top: 10px;
+color: rgb(36, 31, 31);
+
+}
+
+#main{
+    width: 15%; margin: auto;
+    display: grid;  
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 45px 45px 45px 45px 45px 45px;
+    gap: 20px; 
+    grid-template-areas: 
+    "b1 b1 b1"
+    "b1 b1 b1"
+    "b2 b3 b4"
+    "b5 b6 b7"
+    "b8 b9 b10 "
+    ". b11 ."
+   
+}
+#main>div{
+    border: 1px solid black;
+    align-items: center; justify-content: center; display: flex;
+}
+
+#main>div:nth-child(1){
+    grid-area: b1; height: 90px;  
+    background-color: blueviolet;
+    font-size: 40px;
+   
+}
+#main>div:nth-child(2){
+    grid-area: b2;
+    background-color: rgb(5, 39, 5);
+
+}
+#main>div:nth-child(3){
+    grid-area: b3;
+    background-color: hsl(16, 100%, 50%)
+
+}
+#main>div:nth-child(4){
+    grid-area: b4;
+    background-color: rgb(5, 39, 5);
+
+}
+#main>div:nth-child(5){
+    grid-area: b5;
+    background-color: orangered;
+
+}
+#main>div:nth-child(6){
+    grid-area: b6;
+    background-color: orangered;
+
+}
+#main>div:nth-child(7){
+    grid-area: b7;
+    background-color: orangered;
+
+}
+#main>div:nth-child(8){
+    grid-area: b8;
+    background-color: green;
+
+}
+#main>div:nth-child(9){
+    grid-area: b9;
+    background-color: orangered;
+
+}
+#main>div:nth-child(10){
+    grid-area: b10;
+    background-color: green;
+
+}
+#main>div:nth-child(11){
+    grid-area: b11;
+    background-color: blueviolet;
+}
+#main>div:nth-child(12){
+    grid-area: b12;
+    background-color: black;
+    color: white;
+
+}
+h4{
+    text-align: center;
+    position: relative;top: 10px;
+}
+#btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#enter{
+  margin-top: 20px;
+    color: white; background-color: black;
+    padding: 10px 75px 10px 75px;
+}
+
+</style>
+<body>
+    <div id="box1">
+        <div id="min">43</div>
+        <div id="max">2019</div>
+    </div>
+    <div id="t1">
+        <h5>MIN</h5>
+        <h5>MAX</h5>
+    </div>
+        <h4>SCORE</h4>
+    <div id="main">
+        <div id="display">#</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+        
+    </div>
+   <div id="btn"><button id="enter">ENTER</button></div> 
+
+</body>
+</html>
+
+<script>
+    var key = document.querySelectorAll("#main>div")
+    var bag="";
+    var value=0;
+    for(var i=1; i<key.length; i++ )
+    {
+         key[i].addEventListener("click", myfun)
+    }
+
+    function myfun(){
+       value =0;
+        var box1 = document.querySelector("#box>div")
+
+            var targetnumber = event.target.innerText;
+
+            var disp= document.querySelector("#display")
+            disp.innerText=bag;
+
+            bag = bag+targetnumber;
+             value=value + Number(bag)
+           
+            document.querySelector("#display").innerText=bag
+    }
+   
+    var ent = document.querySelector("#enter")
+              ent.addEventListener("click",myent)
+
+            function myent(){
+              var tri = event.target.innerText;
+              document.querySelector("#display").innerText="#"
+              var min = document.querySelector("#min").innerText
+                var max = document.querySelector("#max").innerText
+             if(value<min){
+                document.querySelector("#min").innerText=value
+               
+             }
+             else if(value>max){
+                document.querySelector("#max").innerText=value
+             }
+
+
+            }
+</script>

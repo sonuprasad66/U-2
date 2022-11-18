@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            font-size: 20px;
+            height: 40px;
+            border-radius: 10px;
+            margin-left: 20px;
+            padding: 15px 15px 5px 15px;
+            background-color: rgb(52, 89, 93);
+
+        }
+
+        .nav1 {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+            font-size: 20px;
+        }
+
+        .nav1>div {
+            color: white;
+        }
+
+        .nav1>div:hover {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #container {
+            line-height: 30px;
+            text-align: center;
+
+        }
+
+        #container>input {
+            margin: auto;
+        }
+
+        #container>label {
+
+            font-family: sans-serif;
+            font-weight: bold;
+
+        }
+
+        input {
+            display: block;
+            line-height: 30px;
+
+        }
+
+        button {
+            margin-left: 48%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div><a href="index.html">Home</a></div>
+        <div class="nav1">
+            <!-- <div><a href="signin.html">Men</a></div>
+            <div><a href="signin.html">Women</a></div> -->
+
+        </div>
+    </div>
+
+    <form id="container">
+        <h1>Login</h1>
+        <label>Email</label>
+        <input id="email" type="text" placeholder="Enter Email" />
+        <label>Password</label>
+        <input id="password" type="password" placeholder="Password" />
+        <input id="submit" type="submit" />
+    </form>
+
+    <button><a style="color:black" href="signup.html">Signup</a></button>
+</body>
+
+</html>
+<script>
+
+    var signupdatalist = JSON.parse(localStorage.getItem("signupdatalist"))
+
+
+    var form = document.querySelector("#container")
+    form.addEventListener("submit", myfunction)
+
+    function myfunction() {
+        event.preventDefault()
+
+        var data = {
+            emailname: container.email.value,
+            password: container.password.value
+        }
+
+        if (signupdatalist == null) {
+            alert("please create an account")
+        }
+        else if (signupdatalist.emailname == data.emailname && signupdatalist.password == data.password) {
+            alert("login successful")
+            localStorage.setItem("signindatalist", JSON.stringify(signupdatalist))
+            window.location.href = "homepage.html"
+        }
+        else {
+            alert("wrong credentials")
+        }
+
+    }
+</script>

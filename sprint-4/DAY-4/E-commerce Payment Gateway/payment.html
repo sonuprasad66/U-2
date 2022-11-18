@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaymentPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        *{
+        font-family: 'Roboto', sans-serif;
+      }
+            #ssense{
+            text-decoration: none;
+            color: black;
+        }
+        #payment{
+             width: 800px;
+             margin: auto;
+             margin-top: 60px;
+        }     
+        input{
+            height: 30px;
+        }
+
+        #fle{
+            display: flex;    
+        }
+
+        #mar{
+            margin-right: 180px;
+        }
+
+        #wid{
+            width:180%;   
+        }
+        #widll{
+            width:180%;   
+        }
+        #widlll{
+            width:180%;   
+        }
+        #wid2{
+            width:280%;
+            height: 35px;
+        }
+        
+        #wid3{
+            margin-left: 50px;
+            height: 35px;
+            width: 180px;
+        }
+        #mar4{
+            margin-left: 72px;
+            font-size: 13.5px;
+            color:rgb(63, 61, 61)
+        }
+        #hei2{
+            height: 18px;
+            margin-top: 12px;
+        }
+        #hei3{
+            height: 30px;
+        }
+        #hei4{
+            height: 30px;
+          
+        }
+        #font1{
+            font-size: 14px;
+            margin-left: 5px;
+            color:rgb(63, 61, 61)
+        }
+        #flex2{
+            display: flex; 
+        }
+        #left2{
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        #left3{
+            margin-top: 10px;
+            margin-left: 10px; 
+        }
+        #widtl{
+            width:55%;
+        }
+        #widtll{
+            width:55%;
+        }
+        #but{
+            background-color: black;
+            color: white;
+            height: 35px;
+            width: 40%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        #colo{
+           font-size: 15px;
+           color:rgb(63, 61, 61);
+        }
+         #col3{
+            font-size: 13.5px;
+            color:rgb(63, 61, 61);
+         }
+         #web{
+              font-size:25px ;
+              position: relative;
+              font-family:'Roboto', sans-serif ;
+              width: 10%;
+              margin: auto;
+              font-weight: bold;
+              cursor: default;  
+         }
+         #site{
+             position: fixed;
+            margin-top: -50px;
+         }
+       
+    </style>
+</head>
+<body>
+    <!-- nabar section  -->
+
+            <div id="web"><p id="site"> <a id="ssense" href="homepage.html">GO TO HOME</a> </p></div>
+       
+     <!-- payment section  -->
+
+     <div id="payment">
+         
+         <p id="colo">CHECKOUT</p>
+         <p id="colo">SHIPPING ADDRESS</p>
+         <hr>
+         
+            <div id="fle">
+                <div id="mar">
+                <p id="col3">First Name</p>
+                <input id="wid" type="text">
+                </div>
+                <div id="mar">
+                <p id="col3">Last Name</p>
+                <input id="wid" type="text">
+                </div>
+            </div>
+            <div id="fle">
+                <div id="mar">
+                <p id="col3">Street Address</p>
+                <input id="wid" type="text">
+                </div>
+                <div id="mar">
+                <p id="col3">Company (Optional)</p>
+                <input id="wid" type="text">
+                </div>
+            </div>
+            <div id="fle">
+                <div id="mar">
+                <p id="col3">City</p>
+                <input id="wid" type="text">
+                </div>
+                <div id="mar">
+                <p id="col3">ZIP Or Postal Code</p>
+                <input type="number">
+                </div>
+            </div>
+            <div id="fle">
+             <div id="mar"> 
+                <p id="col3">Country/Region</p>
+             
+            </div>
+             <div id="mar">
+             <p id="mar4">State/Province</p>
+           
+               
+        </div>
+    </div>
+            <div>
+                <p id="col3">Phone</p>
+                <input type="number">
+            </div>
+            
+        
+         <p id="colo">SHIPPING METHOD</p>
+         <hr>
+         <div id="flex2">
+         <div><img id="hei2" src="https://cdn.iconscout.com/icon/free/png-64/circle-182-460373.png" alt=""> </div>
+         <div> <p id="font1"> $0.00 USD | 5-7 days</p></div>
+        </div>
+         <p id="colo">PAYMENT METHOD</p>
+         <hr>
+         <div id="flex2">
+         <div><img id="hei2" src="https://cdn.iconscout.com/icon/free/png-64/circle-182-460373.png" alt=""></div>
+         <div><p id="font1" >Pay with debit card and credit card</p></div>
+         <div id="left2" ><img  id="hei4" src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/visa_borderless_v2.svg" alt=""></div>
+         <div  id="left3" class="top2" ><img  src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/mastercard_borderless_v2.svg" alt=""></div>
+         </div>
+         <div id="flex2">
+         <div><img id="hei2" src="https://cdn.iconscout.com/icon/free/png-64/circle-thin-stroke-round-44590.png" alt=""></div>
+         <div> <p id="font1">Pay with PayPal</p></div>
+         <div id="left3"><img src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/paypal_borderless_v2.svg" alt=""></div>
+         </div>
+         <div id="flex2">
+         <div> <img id="hei2" src="https://cdn.iconscout.com/icon/free/png-64/circle-thin-stroke-round-44590.png" alt=""></div>
+         <div><p id="font1"> Pay with Alipay</p></div>
+         <div id="left3"><img src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/alipay_borderless_v2.svg" alt=""></div>
+         </div>
+
+         <p id="colo">CARD DETAILS</p>
+         <hr>
+         <div id="flex2">
+             <div id="mar">
+                 <p id="col3">Card number</p>
+                 <input id="widlll" type="number" placeholder=" 1234 1234 1234 1234">
+            </div>
+             <div >
+                 <p id="col3">Expiration date</p>
+                 <input  id="widtl" type="number" placeholder="MM / YY">
+            </div>
+         </div>
+         <div id="flex2">
+            <div id="mar">
+                <p id="col3">Card Holder's Name</p>
+                <input id="widll" type="text" >
+           </div>
+            <div >
+                <p id="col3">Security code</p>
+                <input  id="widtll" type="password" placeholder="CVV">
+           </div>
+        </div>
+      
+        <div id="but"><p>PLACE ORDER</p></div>
+
+     </div>
+     
+
+
+    
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#but").addEventListener("click",mypla)
+
+    function mypla(){
+        var carn=document.querySelector("#widlll").value
+        var expida=document.querySelector("#widtl").value
+        var cvp=document.querySelector("#widtll").value
+        
+        if(carn=="" || expida=="" || cvp=="" ){
+            alert(" Please Enter all the given details correctly")
+        }
+        else{          
+            alert("Payment Continue by sending OTP")
+            window.location.href="otp.html"
+        }
+    }
+</script>

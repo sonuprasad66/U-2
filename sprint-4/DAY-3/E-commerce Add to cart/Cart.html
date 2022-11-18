@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <title>Document</title>
+</head>
+<style>
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        font-size: 20px;
+        height: 40px;
+        border-radius: 10px;
+        margin-left: 20px;
+        padding: 15px 15px 5px 15px;
+        background-color: rgb(52, 89, 93);
+
+    }
+
+    .nav1 {
+        display: flex;
+        justify-content: space-evenly;
+        width: 40%;
+        font-size: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+h2{
+    text-align: center;
+}
+
+</style>
+<body>
+    <div id="navbar">
+        <div><a href="index.html">Home</a></div>
+        <div class="nav1">
+            <div><a href="products.html">Products</a></div>
+            <div><a href="Cart.html">Cart</a></div>
+            <div><a href="index.html">Signout</a></div>
+        </div>
+    </div>
+    <h1>Add To Cart Page</h1>
+    <h2>Total Price :-</h2>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+var cart = JSON.parse(localStorage.getItem("cart"))
+
+ displaydata(cart)
+    function displaydata(cart){
+
+    cart.forEach(function(elem, index){
+       
+        var div = document.createElement("div")
+    
+        var img = document.createElement("img")
+        img.setAttribute("src", elem.image_url)
+    
+        var name = document.createElement("h5")
+        name.innerText=elem.name
+    
+        var price = document.createElement("h6")
+        price.innerText=elem.price;
+    
+        var offer = document.createElement("p")
+        offer.innerText=elem.strikedoffprice
+    
+        var btn = document.createElement("button")
+        btn.innerText="Delete"
+        btn.style.color="red"
+       btn. addEventListener("click", function(){
+        deleteitom(elem, index)
+       })
+    
+        div.append(img,name,price,offer,btn )
+    
+       document.querySelector("#container").append(div)
+    })
+
+}
+function deleteitom(elem, index){
+    cart.splice(index,1)
+    localStorage.setItem("cart", JSON.stringify(cart))
+    window.location.reload();
+}
+</script>

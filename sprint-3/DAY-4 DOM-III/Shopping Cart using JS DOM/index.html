@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#container{
+    display: grid; width: 80%; margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+}
+#container>div>h4{
+    color: grey;
+}
+#container>div>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -10px;
+}
+#container>div>p{
+   position: relative;
+   left: 130px; bottom: 33px; 
+   font-size: 13px;
+   color: grey;
+}
+
+</style>
+
+<body>
+    
+    <div id="container">
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+data.forEach(function(elem){
+var box = document.createElement("div");
+
+var image = document.createElement("img");
+image.setAttribute("src", elem. imgUrl) 
+
+var name = document.createElement("h4");
+name.innerText=elem.name
+
+var price = document.createElement("h2");
+price.innerText=elem.price
+
+var offer = document.createElement("p");
+offer.innerText=elem.strikedOffPrice
+
+box.append(image, name, price, offer)
+
+document.querySelector("#container").append(box);
+
+})
+
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        My Layout-2..
+    </title>
+</head>
+<style>
+    #card{
+        width: 80%;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 80px 400px;
+        gap:40px;
+        grid-template-areas: 
+        "nav nav"
+        "l r"
+
+    }
+
+    #card>div:nth-child(1){
+        grid-area: nav;
+        background-color: yellow;
+        font-size: 60px;
+    }
+    #card>div:nth-child(2){
+        grid-area: l;
+        background-color: red;
+    }
+    #card>div:nth-child(3){
+        grid-area: r;
+        background-color: rgb(10, 240, 10) ;
+    }
+    @media all and (min-width:450px) and (max-width:750px){
+        #card{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 80px 150px 150px;
+        grid-template-areas: 
+        "nav"
+        "l"
+        "r"
+        }
+    }
+</style>
+<body>
+    <div id="card">
+        <div>Navigation</div>
+        <div>LEFT BOX</div>
+        <div> RIGHT BOX</div>
+    </div>
+</body>
+</html>
